@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Grow and Shrink</title>
+		<script>
+			var font=0,loading;
+		
+			function start()
+			{
+				loading=window.setInterval("incr()",50);
+			}
+		
+			function incr()
+			{
+				font++;
+				display.innerHTML="TEXT-GROWING : "+font+"pt";
+				display.style.fontSize=font+"pt";
+				if(font>50)
+				{
+					window.clearTimeout(loading);
+					loading=window.setInterval("decr()",50);
+				}
+				display.style.color="red";
+			}
+		
+			function decr()
+			{
+				font--;
+				display.innerHTML="TEXT-SHRINKING : "+font+"pt";
+				display.style.fontSize=font+"pt";
+				if(font==5)
+				{
+					window.clearTimeout(loading);
+					loading=window.setInterval("incr()",50);
+				}
+				display.style.color="blue";
+			}
+		</script>
+	</head>
+	<body style="background:#8f3660;" onload="start()">
+		<center>
+			<p style="margin-top:250px" id="display"></p>
+		</center>
+	</body>
+</html>
