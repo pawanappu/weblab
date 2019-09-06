@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<style>
+			#str
+			{
+				float:center;
+				width:250pt;
+				height:30pt;
+				font-size:18pt;
+			}
+			
+			#sub
+			{
+				float:center;
+				width:100pt;
+				height:40pt;
+				background-color:#03a5fc;
+				border:none;
+			}
+			
+			h2
+			{
+				color:#e05e41;
+			}
+			
+			#result
+			{
+				border:1px solid black;
+				width:300pt;
+			}
+		</style>
+	</head>
+	<body style="background-color :#03fc98">
+		<main style=";margin:auto;">
+		<center>
+			<div><input type="text" id="str" placeholder="Enter String or Number"></div><br>
+			<div><input type="submit" id="sub" onclick="evaluation();" value="Submit"></div><br>
+			<div><h2>Result</h2></div>
+			<div id="result">
+			
+			</div>
+			<script>
+			function evaluation()
+			{
+				var str=document.getElementById("str").value;
+				if(Number.isInteger(parseInt(str)))
+				{
+					var num=parseInt(str);
+					var rev=0,rem=0;
+					while(num>0)
+					{
+						rem=parseInt(num%10);
+						rev=rev*10+rem;
+						num=parseInt(num/10);
+					}  
+					result.innerHTML="<p>Reverse of : <strong> "+str+ " is "+rev+ "</strong></p>";
+				}
+				else
+				{
+					var text="<p>The Entered String is : <strong>"+str+"</strong></p>";
+					for(var i=0; i<str.length; i++)
+					{
+						if(str.charAt(i)=='a' || str.charAt(i)=='e' || str.charAt(i)=='i' || str.charAt(i)=='o' || str.charAt(i)=='u' || str.charAt(i)=='A' || str.charAt(i)=='E' || str.charAt(i)=='I' || str.charAt(i)=='O' || str.charAt(i)=='U')
+						{
+							text += "<p>The Leftmost Vowel is : <strong>"+str.charAt(i)+"</strong></p>";
+							var pos=i+1;
+							text += "<p>The Position of Leftmost Vowel is : <strong>"+pos+"</strong></p>";
+							result.innerHTML=text;
+							exit;
+						}
+					}
+					text += "<p>The Entered  String Has No Vowel</p>";
+					result.innerHTML=text;
+				}  
+			}
+			</script>
+		</center>
+		</main>
+	</body>
+</html>
