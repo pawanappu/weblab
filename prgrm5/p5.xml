@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="p5.css"?>
+<students>
+	<student>
+		<USN>USN : USN>
+		<name>Name : </name>
+		<college>College : VVCE</college>
+		<branch>Branch : CSE</branch>
+		<year>Year : 2016</year>
+		<e-mail>E-Mail : </e-mail>
+	</student>
+	<student>
+		<USN>USN : 4VV16CS</USN>
+		<name>Name : </name>
+		<college>College : VVCE</college>
+		<branch>Branch : CSE</branch>
+		<year>Year : 2016</year>
+		<e-mail>E-Mail : </e-mail>
+	</student>
+	<student>
+		<USN>USN : 4VV16CS</USN>
+		<name>Name : </name>
+		<college>College : VVCE</college>
+		<branch>Branch : CSE</branch>
+		<year>Year : 2016</year>
+		<e-mail>E-Mail : </e-mail>
+	</student>
+</students>
